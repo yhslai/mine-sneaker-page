@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Unity Web Player | Mine Sneaker</title>
+		<title>Mine Sneaker</title>
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
 		<script type="text/javascript">
 		<!--
@@ -64,7 +64,7 @@
 		<!--
 		body {
 			font-family: Helvetica, Verdana, Arial, sans-serif;
-			background-color: white;
+			background-color: #ffffdd;
 			color: black;
 			text-align: center;
 		}
@@ -75,14 +75,25 @@
 			color: #666;
 		}
 		p.header {
-			font-size: small;
-		}
+      margin: 20px;
+      font-size: 40px;
+			font-weight: bold;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+    }
 		p.header span {
 			font-weight: bold;
 		}
 		p.footer {
-			font-size: x-small;
+      margin-top: 30px;
+			font-size: 14px;
+      line-height: 28px;
 		}
+    h3 {
+      margin: 20px 0 5px 0;
+    }
+    p {
+      margin: 5px;
+    }
 		div.content {
 			margin: auto;
 			width: 640px;
@@ -116,7 +127,7 @@
 		</style>
 	</head>
 	<body>
-		<p class="header"><span>Unity Web Player | </span>Mine Sneaker</p>
+		<p class="header">Mine Sneaker</p>
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
@@ -131,6 +142,15 @@
 				</div>
 			</div>
 		</div>
-		<p class="footer">&laquo; created with <a href="http://unity3d.com/unity/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+    <h3>Goal</h3>
+    <p> Kill the cursor before it clears the minefield. </p>
+    <h3>Instruction</h3>
+    <p> Click a mine to pick it up, and click an empty grid to set down. <br/>Note: You're the <strong>imp</strong>, so don't try to control the cursor which you should destroy. </p>
+		<p class="footer">&laquo; Created with
+    <a href="http://unity3d.com/unity/" target="_blank">Unity</a>, 
+    <a href="http://inkscape.org/" target="_blank">Inkscape</a>, 
+    <a href="http://www.bmglyph.com/" target="_blank">bmGlyph</a>, For
+    <a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview" target="_blank">Ludum Dare #25</a>
+    &raquo;</p>
 	</body>
 </html>
