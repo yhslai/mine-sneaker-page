@@ -25,6 +25,15 @@
 		</script>
 		<script type="text/javascript">
 		<!--
+      var isDev = window.location.href.indexOf('localhost') !== -1;
+
+      //Unity file's real URL
+      var gameUrl;
+      if(isDev)
+        gameUrl = "mine-sneaker.unity3d";
+      else
+        gameUrl = "http://raincole.github.com/mine-sneaker/mine-sneaker.unity3d";
+
 			var config = {
 				width: 640, 
 				height: 480,
@@ -67,7 +76,7 @@
 						break;
 					}
 				});
-				u.initPlugin(jQuery("#unityPlayer")[0], "mine-sneaker.unity3d");
+				u.initPlugin(jQuery("#unityPlayer")[0], gameUrl);
 			});
 		-->
 		</script>
