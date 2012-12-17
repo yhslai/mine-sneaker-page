@@ -34,6 +34,12 @@
       else
         gameUrl = "http://raincole.github.com/mine-sneaker/mine-sneaker.unity3d";
 
+      var fbId;
+      if(isDev)
+        fbId = '383722365043795';
+      else
+        fbId = '259132297543094';
+
 			var config = {
 				width: 640, 
 				height: 480,
@@ -80,6 +86,29 @@
 			});
 		-->
 		</script>
+
+    <script>
+      //Fired when the facebook sdk has loaded
+      window.fbAsyncInit = function() {
+          FB.init({
+            appId      : fbId,
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            oauth      : true, // enable OAuth 2.0
+            xfbml      : true // parse XFBML
+          });
+   
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js";
+                fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
 		<style type="text/css">
 		<!--
 		body {
@@ -144,11 +173,23 @@
 			height: 480px;
 			width: 640px;
 		}
+    div.fb-like-container {
+      position: absolute;
+      right: 40px;
+      top: 30px;
+    }
 		-->
 		</style>
 	</head>
 	<body>
+    <div id="fb-root"></div>
+
 		<p class="header">Mine Sneaker</p>
+
+    <div class="fb-like-container">
+      <div class="fb-like" data-href="http://raintomorrow.cc/games/mine-sneaker" data-send="true" data-width="280" data-show-faces="true"></div>
+    </div>
+
 		<div class="content">
 			<div id="unityPlayer">
 				<div class="missing">
