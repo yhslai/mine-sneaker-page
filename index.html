@@ -4,13 +4,13 @@
     <meta property="og:title" content="Mine Sneaker" />
     <meta property="og:type" content="game" />
     <meta property="og:url" content="http://raintomorrow.cc/games/mine-sneaker" />
-    <meta property="og:image" content="http://raincole.github.com/mine-sneaker/img/og-image.png" />
+    <meta property="og:image" content="http://raincole.github.com/mine-sneaker-page/img/og-image.png" />
     <meta property="og:site_name" content="Mine Sneaker" />
     <meta property="og:description" content="Act as a vallain and kill the Minesweepers." />
     <meta property="fb:admins" content="100000353465634" />
 
     <link rel="canonical" href="http://raintomorrow.cc/games/mine-sneaker"/>
-    <link rel="shortcut icon" href="http://raincole.github.com/mine-sneaker/favicon.ico"/>
+    <link rel="shortcut icon" href="http://raincole.github.com/mine-sneaker-page/favicon.ico"/>
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Mine Sneaker</title>
@@ -32,7 +32,7 @@
       if(isDev)
         gameUrl = "mine-sneaker.unity3d";
       else
-        gameUrl = "http://raincole.github.com/mine-sneaker/mine-sneaker.unity3d";
+        gameUrl = "http://raincole.github.com/mine-sneaker-page/mine-sneaker.unity3d";
 
       var fbId;
       if(isDev)
@@ -41,10 +41,10 @@
         fbId = '259132297543094';
 
 			var config = {
-				width: 640, 
+				width: 640,
 				height: 480,
 				params: { enableDebugging:"0" }
-				
+
 			};
 			var u = new UnityObject2(config);
 
@@ -54,7 +54,7 @@
 				var $brokenScreen = jQuery("#unityPlayer").find(".broken");
 				$missingScreen.hide();
 				$brokenScreen.hide();
-				
+
 				u.observeProgress(function (progress) {
 					switch(progress.pluginStatus) {
 						case "broken":
@@ -97,7 +97,7 @@
             oauth      : true, // enable OAuth 2.0
             xfbml      : true // parse XFBML
           });
-   
+
       };
 
       (function(d, s, id) {
@@ -128,12 +128,12 @@
       font-size: 40px;
 			font-weight: bold;
       letter-spacing: 2px;
-      font-family: Impact, Charcoal, sans-serif; 
+      font-family: Impact, Charcoal, sans-serif;
     }
 		p.header span {
 			font-weight: bold;
 		}
-		p.footer {
+		div.footer {
       margin-top: 30px;
 			font-size: 14px;
       line-height: 28px;
@@ -208,14 +208,23 @@
     <p> Kill the cursor before it clears the minefield. </p>
     <h3>Instruction</h3>
     <p> Click a mine to pick it up, and click an empty grid to set down. <br/>Note: You're the <strong>imp</strong>, so don't try to control the cursor which you should destroy. </p>
-		<p class="footer">&laquo; Created by
-    <a href="http://raintomorrow.cc/" target="_blank">Raincole</a>, 
-    Powered by
-    <a href="http://unity3d.com/unity/" target="_blank">Unity</a>, 
-    <a href="http://inkscape.org/" target="_blank">Inkscape</a>, 
-    <a href="http://thirdcog.eu/apps/cfxr" target="_blank">cfxr</a>, 
-    <a href="http://www.bmglyph.com/" target="_blank">bmGlyph</a>, For
-    <a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview" target="_blank">Ludum Dare #25</a>
-    &raquo;</p>
+
+	<div class="footer">
+		<div id="twitter-button">
+        <a href="https://twitter.com/raincolee" class="twitter-follow-button" data-show-count="false">Follow @raincolee</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	    </div>
+
+		&laquo; Created by
+	    <a href="http://raintomorrow.cc/" target="_blank">Raincole</a>,
+	    Powered by
+	    <a href="http://unity3d.com/unity/" target="_blank">Unity</a>,
+	    <a href="http://inkscape.org/" target="_blank">Inkscape</a>,
+	    <a href="http://thirdcog.eu/apps/cfxr" target="_blank">cfxr</a>,
+	    <a href="http://www.bmglyph.com/" target="_blank">bmGlyph</a>, For
+	    <a href="http://www.ludumdare.com/compo/ludum-dare-25/?action=preview" target="_blank">Ludum Dare #25</a>
+	    &raquo;
+	</div>
+
 	</body>
 </html>
